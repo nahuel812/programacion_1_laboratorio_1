@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1522931450 source:c:\users\alumno\desktop\ejercicio_farenheitagrados\main.c
+	<stdio.h>
+	<stdlib.h>
+
