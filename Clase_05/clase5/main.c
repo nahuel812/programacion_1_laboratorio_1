@@ -9,11 +9,17 @@ void modificarValor(int[]);
 //una funcion que reciba un vector y devuelva el maximo valor.
 int buscarMaximo(int[], int);//recibe un array y un entero.
 
+int buscarValor(int[], int, int);
+
+//funcion que devuelva cantidad de numeros pares
+//funcion que devuelva cantidad de numeros positivos
+//
 int main()
 {
     int vector[TAM];
     int i;
     int mayor;
+    int indice;
 
     //ingreso de numeros en el vector por el usuario
     /*
@@ -33,8 +39,20 @@ int main()
     mostrarVector(vector, TAM);
     */
 
+    /*
     mayor = buscarMaximo(vector, TAM);
     printf("El maximo es %d", mayor);
+
+    indice=buscarValor(vector, TAM, 14);
+    if(indice== -1)
+    {
+        printf("No lo encontro!!");
+    }
+    else
+    {
+        printf("Encontro el valor");
+    }
+    */
 
     return 0;
 }

@@ -18,7 +18,7 @@ int buscarMaximo(int vec[], int tam)
 }
 
 
-int cargarVectores(int vec[], int tam)
+void cargarVectores(int vec[], int tam)
 {
     int i;
 
@@ -28,3 +28,20 @@ int cargarVectores(int vec[], int tam)
         scanf("%d", &vec[i]);
     }
 }
+
+int buscarValor(int vec[], int tam, int valor)
+{
+    int index=-1;//el valor a devolver
+    int i;
+
+    for(i=0;i<tam;i++)
+    {
+        if(valor==vec[i])
+        {
+            index=1;
+            break;
+        }
+    }
+    return index;
+}
+

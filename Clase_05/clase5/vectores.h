@@ -1,18 +1,11 @@
-/** \brief buscar el maximo de un vector
- *
- * \param int[]
- * \param int
- * \return int
- *
- */
+
 int buscarMaximo(int[], int);
 
 
-/** \brief carga los vectores
- *
- * \param int
- * \param int
- * \return int
- *
- */
-int cargarVectores(int, int);
+void cargarVectores(int, int);
+
+
+int buscarValor(int[], int, int);
+
+
+//int buscarChar(char[], int, char);
