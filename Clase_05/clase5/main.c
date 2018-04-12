@@ -1,29 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "vectores.h"
 #define TAM 5
 
 void mostrarVector(int[5], int);
 
 void modificarValor(int[]);
+//una funcion que reciba un vector y devuelva el maximo valor.
+int buscarMaximo(int[], int);//recibe un array y un entero.
 
 int main()
 {
     int vector[TAM];
     int i;
-    int edad;
+    int mayor;
 
+    //ingreso de numeros en el vector por el usuario
+    /*
     for(i=0 ; i<TAM ; i++)
     {
         printf("Ingrese un numero: ");
         scanf("%d", &vector[i]);
     }
+    */
+    cargarVectores(vector, TAM);
 
     mostrarVector(vector, TAM);
 
+    /*
     modificarValor(vector);
 
     mostrarVector(vector, TAM);
+    */
 
+    mayor = buscarMaximo(vector, TAM);
+    printf("El maximo es %d", mayor);
 
     return 0;
 }
@@ -38,9 +49,30 @@ void mostrarVector(int vec[5], int tamanio)//funcion para mostrar vector. Lo que
     }
 }
 
+/*
 void modificarValor(int vec[])
 {
     vec[3]=789;
+}
+*/
+/*
+int buscarMaximo(int vec[], int tam)
+{
+    int maximo=0;
+    int i;
+    int flag=0;
+
+    //con un for recorro el vector para buscar el maximo.
+    for(i=0; i<tam ; i++)
+    {
+        if(flag==0 || vec[i]>maximo)
+        {
+            maximo=vec[i];
+            flag=1;
+        }
+    }
+
+    return maximo;
 
 }
-
+*/
