@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523631486 source:d:\programacion_1_laboratorio_nahuelb\clase_06\cadenas_clase6\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
