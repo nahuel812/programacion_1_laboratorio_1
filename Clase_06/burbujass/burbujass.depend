@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1523626344 source:d:\programacion_1_laboratorio_nahuelb\clase_06\burbujass\main.c
+	<stdio.h>
+	<stdlib.h>
+
