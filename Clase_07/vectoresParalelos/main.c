@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#define TAM 3
 //funcion que reciba vector de legajos y que reciba un numero de legajo. va a devolver el indice del legajo o va a devolver -1
 
 float calcularPromedio(int,int);
-void mostrarAlumnos(int[], char[][30], int, int, float, int);//al tipo char le indico tambien que tiene un array de 30 bits.
+void mostrarAlumnos(int*, char[][30], int*, int*, float*);//al tipo char le indico tambien que tiene un array de 30 bits.
+int buscarLegajo(int , int*);
 
 int main()
 {
-    int legajos[3];// todos los vectores tienen que tener la misma capacidad para poder almacenar datos en cada uno
-    char nombres[3][30];//pongo una segunda dimension que indique cuantos caracteres limites pueden tener. ahi puedo ingresar 3 nombres con un limite de 29 caracteres.
-    int nota1[3];
-    int nota2[3];
-    float promedio[3];
+    int legajos[TAM];// todos los vectores tienen que tener la misma capacidad para poder almacenar datos en cada uno
+    char nombres[TAM][30];//pongo una segunda dimension que indique cuantos caracteres limites pueden tener. ahi puedo ingresar 3 nombres con un limite de 29 caracteres.
+    int nota1[TAM];
+    int nota2[TAM];
+    float promedio[TAM];
     int i;
+    int alumno;
 
-    for(i=0;i<3;i++)
+    for(i=0;i<TAM;i++)
     {
         printf("Ingrese un legajo: ");
         scanf("%d", &legajos[i]);
@@ -32,19 +34,22 @@ int main()
 
 
         promedio[i]=calcularPromedio(nota1[i],nota2[i]);
+        printf("\nEl promedio es de: %2.f \n",promedio[i]);
 
-        //printf("\nEl promedio es de: %2.f",promedio[i]);
-
-        printf("\n\n\n");
     }
 
-    mostrarAlumnos(legajos,nombres,nota1,nota2);//le paso los valores a la funcion para que los muestre.
+    mostrarAlumnos(legajos,nombres,nota1,nota2,promedio);//le paso los valores a la funcion para que los muestre.
     /*
     for(i=0;i<3;i++)
     {
         printf("Legajo:%d\n Nombre:%s\n Nota1:%d\n Nota2:%d\n Pormedio:%.2f\n", legajos[i],nombres[i],nota1[i],nota2[i],promedio[i]);
     }
     */
+
+    printf("\nBuscar alumno por legajo: ");
+    scanf("%d", &alumno);
+    printf("Legajo encontrado 1, no encontrado -1: %d", buscarLegajo(alumno, legajos));
+
     return 0;
 }
 
@@ -62,13 +67,30 @@ float calcularPromedio(int nota1, int nota2)
 
 //funcion mostrarAlumnos:
 
-void mostrarAlumnos(int legajo[],char nombres[][30], int nota1[], int nota2[], float promedio[], int cantidad)// la funcion tiene que mostrar los valores del vector, entonces se lo tengo que pasar.
+void mostrarAlumnos(int* legajos,char nombres[TAM][30], int* nota1, int* nota2, float* promedio)// la funcion tiene que mostrar los valores del vector, entonces se lo tengo que pasar.
 {
     int i;
 
-    for(i=0;i<3)//hago que recorra el vector para mostrar los valores.
+    for(i=0;i<TAM;i++)//hago que recorra el vector para mostrar los valores.
     {
-
+        printf("Legajo:%d \n Nombre:%s \n Nota1:%d \n Nota2:%d \n Pormedio:%.2f \n", legajos[i],nombres[i],nota1[i],nota2[i],promedio[i]);
     }
 
 }
+
+int buscarLegajo(int alumno, int* legajos)
+{
+    int i;
+    int index = -1;
+
+    for(i=0;i<TAM;i++)
+    {
+        if(legajos[i] == alumno)
+        {
+            index = 1;
+            break;
+        }
+    }
+    return index;
+}
+
