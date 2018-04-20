@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define TAM 3
+
 //funcion que reciba vector de legajos y que reciba un numero de legajo. va a devolver el indice del legajo o va a devolver -1
 
 float calcularPromedio(int,int);
