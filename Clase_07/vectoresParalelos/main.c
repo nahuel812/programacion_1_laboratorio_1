@@ -48,7 +48,7 @@ int main()
 
     printf("\nBuscar alumno por legajo: ");
     scanf("%d", &alumno);
-    printf("Legajo encontrado 1, no encontrado -1: %d", buscarLegajo(alumno, legajos));
+    printf("Legajo encontrado indice, no encontrado -1: %d", buscarLegajo(alumno, legajos));
 
     return 0;
 }
@@ -77,7 +77,23 @@ void mostrarAlumnos(int* legajos,char nombres[TAM][30], int* nota1, int* nota2, 
     }
 
 }
+/*ejemplo de buscar legajo
+int buscarInt(int enteros[], int tam, int cual)
+{
+    indice = -1;
+    int i;
+    for(i=0;i<TAM;i++)
+    {
+        if(enteros[i]==cual)
+        {
+            indice = i;
+            break;//este break rompe el for y retorna al main.
+        }
 
+    }
+    return indice;
+}
+*/
 int buscarLegajo(int alumno, int* legajos)
 {
     int i;
@@ -87,7 +103,7 @@ int buscarLegajo(int alumno, int* legajos)
     {
         if(legajos[i] == alumno)
         {
-            index = 1;
+            index = i;//le paso i porque es el indice donde se encuentra el valor.
             break;
         }
     }
