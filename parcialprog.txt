@@ -1,0 +1,73 @@
+git comandos git init inicia un repositoro nuevo
+git clone clona un repositorio de forma local
+git status muestra los archivos modificados
+git add agrega archivos para ser commiteados.
+git commit 
+git push sube el repositorio a la nube.
+
+
+una funcion
+Es un microprograma que sirve para realizar una tarea especifica, puede recibir o no y devolver o no datos.
+Se utiliza para sintetizar el codigo y su rendimiento, para la depuracion del codigo, reutilizar y mantenimiento.
+
+declaracion: es la firma donde se establece la funcion, lo que hace es verificar
+definicion: el algoritmo que satiface la funcion
+llamada: es cuando se la invoca, lo que hace es cortar el proceso y seguir con la funcion una vez que termina sigue.
+
+parametros formales, los parametros de la firma. son los parametros que estan en la funcion
+actuales son los que se le pasan a la funcion
+
+pasaje por valor: se le pasa una copia de los valores a la funcion
+
+pasaje por referencia se le pasa una direccion de memoria, porlotanto si modifico se modifica el actual.
+
+
+
+usar getche para leer chars, despues hago validacion con while con alpha, sino busco codigo ascii si es menor a la A o mayor a la Z, pedia el reingreso.
+
+
+
+para hacer una baja primero listo los medicos, luego le pido alguna dato para que me permita identificar al medico, si existe muestro todos sus datos, y luego preunto si 
+si lo quiere dar de baja o no(confimacion), luego si pone si cambia el estado del medico a 0, y si pone no cancelamos la baja. Si no encuentra el medico muestro que no existe el medico en la lista.
+ALGORITMO: pasos detallados de pasos paar logar
+
+
+
+FUNCION DE ORDENAMIENTO
+
+void ordenarNombres(medico lista[], int TAM)
+{
+id
+nombre
+legajo
+
+medico aux;
+int i,j;
+for(i=0;i<TAM;i++)
+{
+	for(j=i+1;j<TAM;j++)
+	{
+		if(strcmp(lista[i].nombre,lista[j].nombre)>0)
+		{
+			aux=lista[i];//swap
+			lista[i]=lista[j];
+			lista[j]=aux;
+		}		
+	}
+}
+}
+
+
+
+ESTRUCTURAS
+
+Variable estructurada 
+
+
+operador punto para ingresar a los campos de la estructura.
+
+pesa la sumatoria del peso de cada campo
+
+propiedades que tienen, asignacion para esto tienen que tener los mismos campos, la otra es la comparacion puedo comparar sus campos.
+
+las ventajas son organizacion del codigo
