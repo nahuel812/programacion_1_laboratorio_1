@@ -1,0 +1,45 @@
+1)Un vector guarda una cantidad especifica de elementos, es limitado, no podemos variar su tamaño a menos que lo modifiquemos en el codigo.
+ademas lo que guarda el vector lo guarda en la pila, y la pila tiene un espacio limitado.
+int vec[3];
+
+1') Usamos vectores con puntero, pero era casi lo mismo qe lo anterior, guardaba la direccion de memoria del vector.
+int* p;
+p = vec;
+
+2)int* vec;
+vec=malloc*3...
+
+En este caso en la pila voy a tener el vec con su propia direccion de meoria, luego al hacer el malloc reservamos espacio en memoria(heap), para los valores
+Es decir que el vec guarda un 
+
+
+Ventajas 
+menos memoria en la pila, pero depende de la estructura.
+como ahora los datos los tengo en memoria dinamica puedo hacer un realloc para reacomodar y agrandar la memoria que necesito para agregar mas datos.
+
+desventajas.
+si no tengo espacio y tengo que hacer un realloc, esto puede ser un poco denso para el so, ya que necesita mover todos los datos que tenia guardados, que pueden se mu pesados si son muchas estructuras por ejemplo
+para acomodarlo otra vez en el nuevo espacio de memoria que encontro.
+
+
+3) int* vec[3];
+
+ventaja
+no necesito memoria ocnsecutiva.
+y si quiero odenarlo levanto direcciones de memoria del vector.
+
+desventaja
+no puedo hacer realloc, porque el vector esta definido con cierto tamaño y no puedo modificarlo.
+
+4)DOBLE PUNTERO:
+
+int** vec;
+vec = (int**)malloc(sizeof(int)*3);//siempre lo casteo para que cambie el estado de void.
+
+En el stack tengo un puntero de vec, y en el heap se va a crear un array de punteros con su propia direccion de memoria. 
+Vec guarda la direccion de memoria del primer puntero,
+
+ventajas
+el array esta enel heap, entonces puedo hacer un realloc con el espacio que necesito, ya que solo tengo que mover direciones de memoria.
+
+
