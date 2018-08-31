@@ -6,22 +6,20 @@
 
 int main()
 {
-    int legajo,nota,edad;
-    float sueldo;
+    int edad;
+    float nota;
     char sexo;
 
-    //legajo = pedirNumeroEntero("legajo:");//llamada de la funcion.
-    //nota = pedirNumeroEntero("nota:");//Le paso el texto que quiero que mustre a la funcion.
-    edad = pedirNumeroEntero("edad:", 18,65);
+    //llamada de la funcion.
 
-    //sueldo = pedirNumeroFlotante("Ingrese su sueldo: ");
+    edad = pedirNumeroEntero("edad:", 18,65);//Le paso el texto que quiero que mustre a la funcion.
+    //nota = pedirNumeroFlotante("nota: ");
+    //sexo = pedirChar("sexo: ");
 
-    //sexo = pedirChar("Ingrese su sexo : ");
+    //MUESTRO LOS VALORES:
 
-    //printf("\nLegajo ingresada: %d",legajo);
-    //printf("\nNota ingresada: %d",nota);
     printf("\nEdad ingresada: %d",edad);
-    //printf("\nSueldo ingresada: %f",sueldo);
+    //printf("\nNota ingresada: %f",nota);
     //printf("\nSexo ingresada: %c",sexo);
 
     return 0;

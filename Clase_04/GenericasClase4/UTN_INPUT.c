@@ -29,15 +29,22 @@ int validarEntero(int numero,char texto[], int min, int max)
     return numero;//retorno el numero ya validado.
 }
 
-float pedirNumeroFlotante(char texto[])//Esta funcion me permite pedir numeros y poder modificar el texto de lo que pide.
+float pedirNumeroFlotante(char texto[],int min ,int max)//Esta funcion me permite pedir numeros y poder modificar el texto de lo que pide.
 {
     float numero;
 
-    printf("%s",texto);//la mascara que me permite mostrar string es "%s"
+    printf("Ingrese %s",texto);//la mascara que me permite mostrar string es "%s"
 
     scanf("%f", &numero);
 
+    validarEntero()
+
     return numero;
+}
+
+int validarFlotante(float numero, char texto[], int, int)
+{
+
 }
 
 char pedirChar(char texto[])
