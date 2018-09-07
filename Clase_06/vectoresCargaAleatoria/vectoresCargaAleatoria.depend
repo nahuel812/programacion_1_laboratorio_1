@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1536325128 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_06\vectorescargaaleatoria\array.c
+	<stdio.h>
+	"array.h"
+
+1536324203 c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_06\vectorescargaaleatoria\array.h
+
+1536325158 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_06\vectorescargaaleatoria\main.c
+	<stdio.h>
+	<stdlib.h>
+	"array.h"
+
