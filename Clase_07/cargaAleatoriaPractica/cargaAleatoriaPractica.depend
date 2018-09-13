@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1536850403 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_07\cargaaleatoriapractica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1536851868 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_07\cargaaleatoriapractica\funciones.c
+	<stdio.h>
+	<stdlib.h>
+
