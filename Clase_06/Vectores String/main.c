@@ -22,11 +22,17 @@ int main()
     gets(nombre);//toma un string de la consola, solo le paso nombre.
     printf("%s", nombre);
     */
-    fgets(nombre,20,stdin);//file gets: vector, cantidad , y el buffer actual. Al final de la cadena me mete un salto de linea y puede contar como caracter.
+    //fgets(nombre,20,stdin);//file gets: vector, cantidad , y el buffer actual. Al final de la cadena me mete un salto de linea y puede contar como caracter.
     //puedo evitar esto y borrar el \n haciendo nombre[strlen(nombre)-1] que es la posicion donde se encuentra, lo remplazo por \0
     //con el scanf("[^\n]",nombre); puedo evitar el \n, el " ^ " sirve para excluir,cuando encuentra el valor despues del ^ excluye todo lo demas, en este caso el \n.
 
     //strcpy(nombre,"juan");//copia una variable a otra, recive dos cadenas. strcpy(destino,origen);
+
+
+    //cadena destino, cadena origen y cantidad por ultimo en strncpy
+    //strncpy(nombre, otroNombre, 9);//copia una cantidad de caraceteres, recive un puntero char, constante char y el tamaño(cant de caracteres a copiar.)
+    //puts(nombre);
+
 
     //si uso STRICMP ignora las mayusculas.
     compara=strcmp(nombre, otroNombre);//Me permite comparar 2 cadenas de caracteres, recive 2 cadenas y devuelve 1 entero.
@@ -59,7 +65,7 @@ int main()
     strcat(otroNombre,nombre);//CONCATENA 2 VARIABLES(los une). Puede ser (variable,variable) o (variable,literal)
     printf("\nUsando strcat: %s", otroNombre);
 
-    //puts();//Me permite mostrar alguna variable string, pero no puedo escribir otras cosas dentro como en el print.
+    //puts(nombre);//Me permite mostrar alguna variable string, pero no puedo escribir otras cosas dentro como en el print.
     /*
     int i;
     for(i=0;i<strlen(nombre);i++)

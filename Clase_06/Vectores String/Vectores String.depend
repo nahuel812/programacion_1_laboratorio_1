@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1536330347 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_06\vectores string\main.c
+1536840239 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_06\vectores string\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
