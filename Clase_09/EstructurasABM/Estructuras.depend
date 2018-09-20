@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1537416294 source:c:\users\nahuel\desktop\programacion_1_laboratorio_1-master\clase_08\estructurasabm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumnos.h"
+
+1537415809 c:\users\nahuel\desktop\programacion_1_laboratorio_1-master\clase_08\estructurasabm\alumnos.h
+
