@@ -26,15 +26,12 @@ eAlumno cargarAlumno()
 
 }
 
-
-
 void mostrarAlumno (eAlumno alumnoParametro)
 {
     printf("%12d -- %10s -- %10s -- %f\n", alumnoParametro.legajo, alumnoParametro.nombre, alumnoParametro.direccion, alumnoParametro.promedio);
 }
 
-
-
+//CARGA SECUENCIAL.
 void cargarListado(eAlumno listado[], int tam)
 {
     int i;
@@ -44,6 +41,7 @@ void cargarListado(eAlumno listado[], int tam)
     }
 }
 
+//CARGA ALEATORIA. baja logica.
 
 
 void mostrarListado(eAlumno listado[], int tam)
@@ -54,4 +52,3 @@ void mostrarListado(eAlumno listado[], int tam)
         mostrarAlumno(listado[i]);
     }
 }
-
