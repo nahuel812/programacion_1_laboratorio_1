@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1538049904 source:c:\users\alumno\desktop\clases-segc-2018-master\clase 9 -- 20-09\(2) alumnos (estructura)\alumnos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumnos.h"
+
+1538049959 c:\users\alumno\desktop\clases-segc-2018-master\clase 9 -- 20-09\(2) alumnos (estructura)\alumnos.h
+
+1538049733 source:c:\users\alumno\desktop\clases-segc-2018-master\clase 9 -- 20-09\(2) alumnos (estructura)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumnos.h"
+
