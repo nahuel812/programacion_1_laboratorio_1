@@ -31,16 +31,17 @@ eAlumno cargarAlumno()
     printf("Ingrese el promedio: ");
     scanf("%f", &miAlumno.promedio);
 
+
     miAlumno.estado = 1;
 
-    return miAlumno;
+    return miAlumno;//retorna una estructura alumno
 }
 
 
 
-void mostrarAlumno (eAlumno alumnoParametro)
+void mostrarAlumno(eAlumno alumnoParametro)
 {
-    printf("%d -- %s -- %s -- %f\n", alumnoParametro.legajo, alumnoParametro.nombre, alumnoParametro.direccion, alumnoParametro.promedio);
+    printf("%d -- %s -- %s -- %.3f\n", alumnoParametro.legajo, alumnoParametro.nombre, alumnoParametro.direccion, alumnoParametro.promedio);
 }
 
 
@@ -115,12 +116,13 @@ int borrarAlumno (eAlumno listado[], int tam)
     return encontro;
 }
 
-int modificarAlumno (eAlumno listado[], int tam)
+int modificarAlumno(eAlumno listado[], int tam)
 {
     int legajo;
     int i;
     int encontro = 0;
     printf("Ingrese el legajo a buscar: ");
+    fflush(stdin);
     scanf("%d", &legajo);
 
     for (i=0; i<tam; i++)
@@ -128,7 +130,7 @@ int modificarAlumno (eAlumno listado[], int tam)
         if (legajo == listado[i].legajo && listado[i].estado == 1)//cuando encuentro legajo y esta ocupado entra.
         {
             //PUEDO PREGUNTAR QUE DATO QUIERO MODIFICAR CON MENU DE OPCIONES ACA.
-            printf("Ingre el nuevo promedio: ");
+            printf("Ingrese el nuevo promedio: ");
             scanf("%f", &listado[i].promedio);
 
             encontro = 1;
@@ -146,6 +148,7 @@ void inicializarAlumnosConDatos(eAlumno listado[], int tam)
     char nombre[5][50]={"Juan","Maria","Pedro","Susana","Luis"};
     char direccion[5][50]={"aaa","bbb","ccc","ddd","eee"};
     float promedio[5]={3,8,6,4,7};
+    int curso[5]={100,102,101,100,102};
 
     //los datos que tengo cargados ahi los paso a la estructura.
     int i;
@@ -156,6 +159,8 @@ void inicializarAlumnosConDatos(eAlumno listado[], int tam)
         strcpy(listado[i].nombre, nombre[i]);//lo mismo, copio el nombre en el campo de la estructura.
         strcpy(listado[i].direccion, direccion[i]);
         listado[i].promedio = promedio[i];
+        listado[i].idCurso = curso[i];
+
         listado[i].estado = OCUPADO;//pongo los estados en ocupado.
     }
 

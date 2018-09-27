@@ -1,15 +1,27 @@
 #define VACIO 0
 #define OCUPADO 1
 #define ELIMINADO -1
+
+typedef struct//estructura fecha.
+{
+    int dia;
+    int mes;
+    int anio;
+}eFecha;
+
 typedef struct
 {
     int legajo;
     char nombre[50]; // Guarda una cadena. Por eso es un vector.
     char direccion[50];
     float promedio;
+    int idCurso;
 
     int estado;
+    //COMPOSICION-DATOS COMPUESTOS, VARIAS COSAS.
+    //eFecha fechaNacimiento;//ESTRUCTURAS ANIDADAS.
 } eAlumno;
+
 
 
 eAlumno cargarAlumno();

@@ -13,3 +13,24 @@
 	<string.h>
 	"Alumnos.h"
 
+1538060641 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_10\abm estructuas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumnos.h"
+	"Curso.h"
+
+1538058710 c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_10\abm estructuas\alumnos.h
+
+1538060758 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_10\abm estructuas\alumnos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumnos.h"
+
+1538059435 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_10\abm estructuas\curso.c
+	<stdio.h>
+	"Curso.h"
+
+1538059435 c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_10\abm estructuas\curso.h
+
