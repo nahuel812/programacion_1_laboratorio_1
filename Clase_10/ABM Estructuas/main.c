@@ -42,6 +42,7 @@ int main()
         printf("3: BORRAR ALUMNOS. \n");
         printf("4: MODIFICAR ALUMNO. \n");
         printf("5: MOSTRAR ALUMNO CON CURSO. \n");
+        printf("6: MOSTRAR ALUMNOS CURSAN PHP. \n");
 
         printf("10: SALIR. \n");
         printf("====================\n");
@@ -51,52 +52,52 @@ int main()
         switch(opcion)
         {
         case 1:
-                if (cargarAlumnoEnListado(listaAlumnos, A))
-                {
-                    printf("\n\nDato cargado con exito\n\n");
-                }
-                else
-                {
-                    printf("\n\nNo existe espacio disponible\n\n");
-                }
+            if (cargarAlumnoEnListado(listaAlumnos, A))
+            {
+                printf("\n\nDato cargado con exito\n\n");
+            }
+            else
+            {
+                printf("\n\nNo existe espacio disponible\n\n");
+            }
             break;
 
         case 2:
-                mostrarListado(listaAlumnos, A);
+            mostrarListado(listaAlumnos, A);
             break;
 
         case 3:
-                if(borrarAlumno(listaAlumnos, A))
-                {
-                    printf("\nDato encontrado.\n");
-                    printf("\nEl alumno se borro.\n");
-                }
-                else
-                {
-                    printf("\nEl alumno no se encontro.\n");
-                }
-                break;
+            if(borrarAlumno(listaAlumnos, A))
+            {
+                printf("\nDato encontrado.\n");
+                printf("\nEl alumno se borro.\n");
+            }
+            else
+            {
+                printf("\nEl alumno no se encontro.\n");
+            }
+            break;
 
-         case 4:
-                if(modificarAlumno(listaAlumnos, A))
-                {
-                    printf("\nDato encontrado.\n");
-                    printf("\nEl alumno se modifico correctamente.\n");
-                }
-                else
-                {
-                    printf("\nEl alumno no se encontro.\n");
-                }
-                break;
+        case 4:
+            if(modificarAlumno(listaAlumnos, A))
+            {
+                printf("\nDato encontrado.\n");
+                printf("\nEl alumno se modifico correctamente.\n");
+            }
+            else
+            {
+                printf("\nEl alumno no se encontro.\n");
+            }
+            break;
 
-         case 5:
-            for(i=0;i<A;i++)
+        case 5:
+            for(i=0; i<A; i++)
             {
                 if(listaAlumnos[i].estado == OCUPADO)
                 {
                     //muestro cada alumno
                     printf("\n%d--%s--%f--",listaAlumnos[i].legajo, listaAlumnos[i].nombre,listaAlumnos[i].promedio);
-                    for(j=0;j<3;j++)
+                    for(j=0; j<3; j++)
                     {
                         //muestro el curso del alumno, lo hago matchear con el if para que lo muestre.
                         if(listaAlumnos[i].idCurso == misCursos[j].id)//j es para recorrer array de cursos.
@@ -109,8 +110,22 @@ int main()
             }
             break;
 
+        case 6:
+            printf("Cursan PHP: ");
+            for(i=0 ; i<A; i++)
+            {
+                if(listaAlumnos[i].estado == OCUPADO && listaAlumnos[i].idCurso == 100 )
+                {
+                    printf("%s\n",listaAlumnos[i].nombre);
+                }
+                else
+                {
+                    printf("Ninguno");
+                }
+            }
+            break;
         case 10:
-                printf("Programa finalizado! \n");
+            printf("Programa finalizado! \n");
             break;
 
         default:
@@ -120,7 +135,8 @@ int main()
         system("pause");
         system("cls");
 
-    }while(opcion!=10);
+    }
+    while(opcion!=10);
 
     return 0;
 }
