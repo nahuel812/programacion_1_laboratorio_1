@@ -24,6 +24,7 @@ int main()
     {
         *pEntero = 9;
         printf("%d",*pEntero);
+        free(pEntero);//Despues de mostrar libero el espacio.
     }
     else
     {
@@ -31,9 +32,10 @@ int main()
     }
 
     //para liberar espacio de la memoria que ya no se usa uso la funcion free
-    //NO BORRA LOS DATOS, SOLO LOS LIBERA PERO LOS DATOS SIGUEN AHI, PERO PUEDEN BORRARSE ES DECIR QUE YA NO ESTAN RESERVADOS
+    //NO BORRA LOS DATOS O SI, SOLO LOS LIBERA PERO LOS DATOS SIGUEN AHI, PERO PUEDEN BORRARSE ES DECIR QUE YA NO ESTAN RESERVADOS
     //esta funcion recibe un puntero a cualqueir cosa.
-    free(pEntero);//libero el espacio de memoria que contiene pEntero, pq ya no lo necesito
+    //SI BORRA LOS DATOS,LIBERA LA MEMORIA, PERO EL VINCULO DE LAS DIRECCIONES DE MEMORIA SIGUE
+    //free(pEntero);//libero el espacio de memoria que contiene pEntero, pq ya no lo necesito
 
 
     return 0;

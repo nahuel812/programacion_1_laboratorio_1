@@ -3,9 +3,9 @@
 
 typedef struct
 {
-    char nombre[20];
+    int edad;
     int nota;
-}eAlumno;
+} eAlumno;
 
 eAlumno* funcion(void);//las fx pueden devolver punteros.
 
@@ -14,44 +14,40 @@ int main()
     eAlumno* pAlumno;
 
     pAlumno = funcion();
-
-    printf("\nNombre: %s \nNota:%d",pAlumno->nombre,pAlumno->nota);
+    if(pAlumno == NULL)
+    {
+        printf("No hay espacio");
+    }
+    else
+    {
+        printf("\nEdad:%d -- Nota:%d\n",pAlumno->edad,pAlumno->nota);
+    }
 
     return 0;
 }
 
-//crear estructura
-//crear un puntero
-//funcion crear puntero a la estrctura y devolverlo
-
-///
-eAlumno* funcion(void)
+eAlumno* funcion(void)//esto es un constructor- crea espacio en memoria y inicializa valores.
 {
-
-    eAlumno miAlumno;
+    //eAlumno miAlumno;
     eAlumno* pAlumnoAux;
 
-    pAlumnoAux = &miAlumno;
+    //CASTEO A TIPO ESTRUCTURA DE ALUMNO
+    pAlumnoAux = (eAlumno*)malloc(sizeof(eAlumno));
+    if(pAlumnoAux != NULL)
+    {
+        /*
+        ///hardcodeo
+        pAlumnoAux->edad = 18;
+        pAlumnoAux->nota = 8;
+        */
+        printf("\nIngrese edad: ");
+        fflush(stdin);
+        scanf("%d", &pAlumnoAux->edad);//cuando le pido al usuario y quiero guardar lo guarda en esa direc de memoria.
 
-    printf("\nIngrese nombre: ");
-    fflush(stdin);
-    scanf("%s",miAlumno.nombre);
+        printf("\nIngrese nota: ");
+        scanf("%d", &pAlumnoAux->nota);
 
-    printf("\nIngrese nota: ");
-    scanf("%d",miAlumno.nota);
-
-/*
-    printf("\nIngrese nombre: ");
-    fflush(stdin);
-    scanf("%s",pAlumnoAux->nombre);
-
-    printf("\nIngrese nota: ");
-    scanf("%d",pAlumnoAux->nota);
-    */
+    }
 
     return pAlumnoAux;
 }
-
-/*
-El heap esta hecho para guardar informacion de grandes cantidade
-*/
