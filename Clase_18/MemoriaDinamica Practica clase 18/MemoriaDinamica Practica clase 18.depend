@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1540480084 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_18\memoriadinamica practica clase 18\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Persona.h"
+
+1540480047 c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_18\memoriadinamica practica clase 18\persona.h
+
+1540480047 source:c:\users\alumno\desktop\programacion_1_laboratorio_1-master\clase_18\memoriadinamica practica clase 18\persona.c
+	"Persona.h"
+	<stdio.h>
+	<string.h>
+

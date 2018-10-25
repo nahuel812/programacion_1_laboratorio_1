@@ -48,6 +48,21 @@ void ePersona_setEdad(ePersona* unaPersona, int edad)
     unaPersona->edad = edad;
 }
 
+char* ePersona_getNombre(ePersona* unaPersona)
+{
+    char nombre[20];
+    strcpy(nombre, unaPersona->nombre);
+
+    return nombre;
+}
+
+void ePersona_setNombre(ePersona* unaPersona, char nombre[])
+{
+    strcpy(unaPersona->nombre,nombre);
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
 void ePersona_mostrar(ePersona* unaPersona)
 {
     printf("%d - %s - %d\n",unaPersona->id,unaPersona->nombre,unaPersona->edad);

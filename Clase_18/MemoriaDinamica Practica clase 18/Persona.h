@@ -11,5 +11,8 @@ ePersona* nuevaPersonaParametros(int,char*,int);
 int ePersona_getEdad(ePersona*);//getter de edad de una persona, puedo validar dentro de la funcion
 void ePersona_setEdad(ePersona*,int);//setter de edad, setea un valor en el campo edad de la persona.
 
+char* ePersona_getNombre(ePersona*);
+void ePersona_setNombre(ePersona*, char[]);
+
 void ePersona_mostrar(ePersona*);
 
