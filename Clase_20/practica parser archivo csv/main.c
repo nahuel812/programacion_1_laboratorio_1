@@ -8,29 +8,22 @@ int main()
     char id[20];
     char nombre[20];
     char apellido[20];
-    int i;
 
     pArchivoDatos = fopen("empleados.csv","r");
 
     if(pArchivoDatos != NULL)
     {
-        do
+        while(!feof(pArchivoDatos))
         {
-            fscanf(pArchivoDatos,"%[^,],%[^,],%[^\n]\n", id, nombre,apellido);
-
-        }while(!feof(pArchivoDatos));
+            fscanf(pArchivoDatos,"%[^,],%[^,],%[^\n]\n", id, nombre,apellido);///leo los datos y los guardo en las variables char
+            printf("%s--%s--%s\n", id,nombre,apellido);///muestro lo que guarde en las variables
+        }
     }
     else
     {
         printf("No se pudo abrir el archivo.\n");
     }
     fclose(pArchivoDatos);
-
-    for(i=0;i<10;i++)
-    {
-        printf("%s--%s--%s\n", id[i],nombre[i],apellido[i]);
-
-    }
 
     return 0;
 }
